@@ -33,7 +33,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get("/api", (req, res) => {
-  res.json({ Hello: "world" });
+  res.end({ Hello: "world" });
 });
 // app.get("/", (req, res) => {
 //   return promiseSomething()
