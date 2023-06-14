@@ -68,6 +68,4 @@ app.get("/my-posts", (req, res) => {
     });
 });
 
-app.listen(3010, () => {
-  console.log("server is running on port 3010");
-});
+module.exports = app;
