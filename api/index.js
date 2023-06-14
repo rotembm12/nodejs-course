@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get("/api", (req, res) => {
-  res.end({ Hello: "world" });
+  res.json({ Hello: "world" });
 });
 // app.get("/", (req, res) => {
 //   return promiseSomething()
