@@ -1,30 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
-const { auth } = require("./auth.mw");
-
 const app = express();
-
-const idle = () =>
-  new Promise((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, 4000);
-  });
-
-const promiseSomething = () => {
-  return new Promise((resolve, reject) => {
-    idle().then(() => {
-      const value = Math.random() > 0.5 ? "success" : null;
-
-      if (value) {
-        resolve(value);
-      } else {
-        reject("couldnt calc");
-      }
-    });
-  });
-};
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
